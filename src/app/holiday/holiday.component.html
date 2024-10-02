@@ -1,0 +1,7 @@
+<h1>Holiday Status</h1>
+<span *ngIf="isHolidayToday"
+  >Today is {{ todayHoliday.name }}: <strong>CLOSED</strong></span
+>
+<span *ngIf="!isHolidayToday"
+  >Today is not a holiday: <strong>Parking Garage is OPEN</strong></span
+>
