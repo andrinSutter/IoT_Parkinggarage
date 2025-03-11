@@ -7,9 +7,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './holiday.component.html',
-  styleUrl: './holiday.component.css'
+  styleUrls: ['./holiday.component.css']
 })
-export class HolidayComponent implements OnInit{
+
+export class HolidayComponent implements OnInit {
   holidays: any[] = [];
   todayHoliday: any = null;
   isHolidayToday: boolean = false;

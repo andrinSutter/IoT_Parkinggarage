@@ -1,0 +1,27 @@
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 8px;
+  font-size: 1.5rem;
+}
+
+.open {
+  font-weight: bold;
+  color: rgb(0, 108, 0);
+  margin: 6px;
+  font-size: 1.2rem;
+  border: 2px green solid;
+  padding: 2px;
+}
+
+.closed {
+  font-weight: bold;
+  color: red;
+  margin: 6px;
+  font-size: 1.2rem;
+  border: 2px red solid;
+  padding: 2px;
+}

@@ -1,0 +1,20 @@
+<div>
+  <!-- Headlights component -->
+  <h1>Barriere</h1>
+  <div class="main">
+    <div class="headlights-container">
+      <div class="headlight" [ngClass]="{ on: isAnalogValueEleven }"></div>
+      <div class="headlight" [ngClass]="{ on: isAnalogValueEleven }"></div>
+    </div>
+  </div>
+
+  <div *ngIf="isAnalogValueEleven" class="main">
+    <button
+      (click)="doPublishOpenBarrier()"
+      class="headlight-button"
+      [ngClass]="{ on: isAnalogValueEleven }"
+    >
+      Open Barrier
+    </button>
+  </div>
+</div>

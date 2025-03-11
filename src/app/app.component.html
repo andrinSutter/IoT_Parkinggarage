@@ -1,24 +1,24 @@
+<h1>IoT Parkhaus</h1>
 <div>
-  <button (click)="createConnection()">Connect to MQTT Broker</button>
-  <div *ngIf="isConnection">
-    <p>Connected</p>
-    <div *ngIf="analogValue !== undefined">
-      <h3 style="display: inline">Message:</h3>
-      <p>{{ analogValue }}</p>
-      <!-- Directly display the analog value -->
+  <!--   <div *ngIf="analogValue !== undefined">
+    <h3 style="display: inline">Message:</h3>
+    <p>{{ analogValue }}</p>
+  </div> -->
+
+  <app-barrier-entry></app-barrier-entry>
+  <div class="buttonWrapper">
+    <button *ngIf="!isConnection" (click)="createConnection()" class="Connect">
+      Connect to MQTT Broker
+    </button>
+
+    <div class="PubSub">
+      <div class="button">
+        <button (click)="doPublish()" class="Publish">Publish</button>
+      </div>
+      <div class="button">
+        <button (click)="doSubscribe()" class="Subscribe">Subscribe</button>
+      </div>
     </div>
-  </div>
-  <div *ngIf="!isConnection">
-    <p>Not Connected</p>
-  </div>
-  <div>
-    <button (click)="doPublish()">Publish Message</button>
-  </div>
-  <div>
-    <button (click)="doSubscribe()">Subscribe Topic</button>
-  </div>
-  <div>
-    <button (click)="destroyConnection()">Disconnect</button>
+    <button (click)="destroyConnection()" class="Disconnect">Disconnect</button>
   </div>
 </div>
-<app-holiday></app-holiday>
